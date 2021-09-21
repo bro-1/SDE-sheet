@@ -1,0 +1,16 @@
+https://leetcode.com/problems/search-a-2d-matrix/
+https://www.geeksforgeeks.org/search-in-row-wise-and-column-wise-sorted-matrix/
+
+In the leetcode version, one extra condition is there:
+
+the first element of every row is greater than the last element of the previous row.
+
+1st approach -> iterate through the 2D array row by row and search for the target.
+ TC-> O(n*m)
+ 
+2nd approach -> 
+Click 1-> every row and every column is sorted. So, we can go for BS.
+Do a BS on every row
+TC-> O(n*logm)
+
+
