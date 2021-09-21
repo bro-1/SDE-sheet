@@ -1,2 +1,9 @@
 https://leetcode.com/problems/top-k-frequent-elements/
 
+can use a hash map ... hashing takes O(n) 
+... will have to sort it. TC -> O(nlogn)
+
+Better approach-> use a heap O(n) + (klogn)
+sc -> O(n)
+
+max heap
