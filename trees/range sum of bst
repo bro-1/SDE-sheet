@@ -23,7 +23,7 @@ public:
             q.pop();
             if((node->val)>=low&&(node->val)<=high) sum+=node->val;
             if(node->left!=NULL &&(node->val)>low) q.push(node->left);
-            if(node->right!=NULL &&(node->val)<=high) q.push(node->right);
+            if(node->right!=NULL &&(node->val)<high) q.push(node->right);
         }
         return sum;
     }
