@@ -1,0 +1,25 @@
+https://leetcode.com/problems/maximum-subarray/
+
+kadane's algo:
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum=0;
+        int maxi=0;
+        int start, end;
+        int s;
+        for(int i=0;i<nums.size();i++){
+           sum+=nums[i];
+            if(sum<0){
+                sum=0;
+                s=i+1;
+            }
+            if(maxi<sum){
+                maxi=sum;
+                end=i;
+                start=s;
+            }
+        }
+        return maxi;
+    }
+};
