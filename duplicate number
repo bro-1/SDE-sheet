@@ -1,0 +1,40 @@
+
+
+
+1st solution: used unordered map
+TC: O(n)
+SC: O(n)
+
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        unordered_map <int,int> mpp;
+        int ans=0;
+        for(int i=1;i<=nums.size();i++){
+            if(mpp[nums[i]]!=1) mpp[nums[i]]++;
+            else ans=nums[i];
+        }
+        return ans;
+    }
+};
+
+2nd solution: used tortoise method/ slow and fast pointers
+
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int slow=nums[0];
+        int fast=nums[0];
+        do{
+            slow=nums[slow];
+            fast=nums[nums[fast]];
+        }
+        while(slow!=fast);
+        fast=nums[0];
+        while(slow!=fast){
+            slow=nums[slow];
+            fast=nums[fast];
+        }
+        return slow;
+    }
+};
