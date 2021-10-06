@@ -25,7 +25,7 @@ public:
         pair<int,int> leftvalue= dfs(root->left);
         pair<int,int> rightvalue= dfs(root->right);
         int withRoot= root->val+leftvalue.second+rightvalue.second;
-        int withoutRoot= max(leftvalue.first,leftvalue.second)+max(rightvalue.first,rightvalue.second);
+        int withoutRoot= max(leftvalue.first,leftvalue.second)+max(rightvalue.first,rightvalue.second);//because we can include the child here or not include it based on whichever option gives us the maximum robbery
         return make_pair(withRoot,withoutRoot);
     }
 };
