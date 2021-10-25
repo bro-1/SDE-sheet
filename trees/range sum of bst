@@ -11,6 +11,7 @@ https://leetcode.com/problems/range-sum-of-bst/
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+ //BFS
 class Solution {
 public:
     int rangeSumBST(TreeNode* root, int low, int high) {
@@ -32,6 +33,7 @@ public:
 //SC-> O(n)
 
 Recursive solution
+//DFS
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
