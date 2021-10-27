@@ -1,6 +1,10 @@
 
 https://leetcode.com/problems/median-of-two-sorted-arrays/
 
+Naive solution: two pointer merge sort kinda
+TC: O(n+m)
+SC: O(n+m)
+
 TC: O(log(min(n,m))
 class Solution {
 public:
